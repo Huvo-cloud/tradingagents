@@ -11,6 +11,7 @@ import os
 from dateutil.relativedelta import relativedelta
 from langchain_openai import ChatOpenAI
 import tradingagents.dataflows.interface as interface
+from tradingagents.dataflows.tradingagents_tool import get_portfolio_technical_report
 from tradingagents.default_config import DEFAULT_CONFIG
 from langchain_core.messages import HumanMessage
 
@@ -32,6 +33,8 @@ def create_msg_delete():
 
 
 class Toolkit:
+    get_portfolio_technical_report = staticmethod(get_portfolio_technical_report)
+
     _config = DEFAULT_CONFIG.copy()
 
     @classmethod
