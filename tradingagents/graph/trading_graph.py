@@ -115,6 +115,7 @@ class TradingAgentsGraph:
             "market": ToolNode(
                 [
                     # online tools
+                    self.toolkit.get_portfolio_technical_report,
                     self.toolkit.get_YFin_data_online,
                     self.toolkit.get_stockstats_indicators_report_online,
                     # offline tools
